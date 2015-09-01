@@ -1,0 +1,172 @@
+@import url(https://fonts.googleapis.com/css?family=Signika:400,300,600);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+body{
+  padding: 0;
+  margin:0;
+}
+a.close{
+  float: right;
+}
+#wrapper{
+  font-family: 'Signika', sans-serif;
+
+}
+form{
+  margin: 1%;
+  input{
+    font-family: 'Signika', sans-serif;
+    height: 40px;
+    width: 70%;
+    font-size: 1.3em;
+    padding: 0 0 1% 0;
+    color: #464646;
+    border: 0;
+    font-weight: 300; 
+    border-bottom: 2px solid #000;
+    &:focus{
+      outline: none;
+    }
+  }
+  button{
+    width: 20%;
+    font-size: 1.3em;
+    padding: 1% 0;
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    &:focus{
+      outline:none;
+    }
+  }
+}
+$paddingVal:5%;
+$doorWidth: 50 - $paddingVal*2;
+$doorHeight: 100 - $paddingVal*2;
+#doors{
+  ul.selectBeers{
+    list-style-type: none;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    li{
+      color: gold;
+      padding: 1%;
+      text-align: left;
+      font-weight: 300;
+      &:hover{
+        color:#000;
+        background: gold;
+        cursor: pointer;
+      }
+    }
+  }
+  input{
+    border:none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    background: #000;
+    width: calc(90% - 100px);
+    font-family: 'Signika', sans-serif;
+    font-size: 1.2em;
+    padding-bottom: 1%;
+    letter-spacing: 1px;
+    &:focus{
+      outline:none;
+    }
+  }
+  button{
+    width: 100px;
+    font-size: 1.3em;
+    padding: 1% 0;
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    &:focus{
+      outline:none;
+    }
+  }
+  div.left, div.right{
+    overflow-y: scroll;
+    display: inline-block;
+    height: 100%;
+    transition:1s all;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    width:$doorWidth;
+    text-align: center;
+    padding: $paddingVal;
+  }
+  .pair{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin: 0px auto;
+    button{
+      transition:1s all;
+      background-color: gold;
+      height: auto;
+      font-size: 1.1em;
+      font-weight: 300;
+      width: auto;
+      padding: 1% 2%;
+      &.hidden{
+        transform:translateY(-100%); 
+      }
+    }
+  }
+  .left{
+    margin-left: 0;
+    left: 0;
+      &.hidden{
+        margin-left: - ($doorWidth+($paddingVal*2));
+      }
+  }
+  .right{
+    margin-right: 0;
+    right: 0;
+    &.hidden{
+      margin-right: - ($doorWidth+($paddingVal*2));
+    }
+  }
+}
+
+.input-group{
+  a{
+    float: right;
+  }
+}
+h1,h2{
+  line-height: 1;
+  letter-spacing: -1px;
+  font-weight: 600;
+}
+
+.hero-unit {
+  position: relative;
+  padding: 30px 15px;
+  color: #F5F5F5;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background: #4393B9;
+}
+
+.navbar-text {
+  margin-left: 15px;
+}
+.beers, .movie{
+  vertical-align:top;
+  display:inline-block;
+  width:46%;
+  padding: 1%;
+  p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+  }
+}

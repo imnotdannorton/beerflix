@@ -1,0 +1,40 @@
+#wrapper
+  #doors
+    
+    .left
+      h2(ng-show="activeBeer") {{activeBeer.name}}
+      p(ng-hide="activeBeer") 
+        input(ng-model="beerFind" placeholder="What Are You Drinking?")
+        button Search
+        ul(ng-if="beersList" class="selectBeers" ng-hide="activeBeer")
+          li(ng-repeat="beer in beersList" ng-click="matchBeer(beer)") {{beer.name}}
+    .right
+      h2(ng-show="activeMovie") {{activeMovie.Title}}
+      p(ng-hide="activeMovie") 
+        input(ng-model="movieFind" placeholder="What Are You Watching?")
+        button Search
+        ul(ng-if="flixList" class="selectBeers" ng-hide="activeMovie")
+          li(ng-repeat="movie in flixList" ng-click="matchMovie(movie)") {{movie.Title}}
+    .pair(ng-show="activeMovie && activeBeer")
+      button(ng-click="makePair(activeBeer, activeMovie)" value="Create Match") Create Pair
+  //- p.input-group
+  //-   
+  //-   form(ng-submit='movieSearch(newThing)')
+  //-       input.form-control(type='text', placeholder='Add a new thing here.', ng-model='newThing')
+  //-       span.input-group-btn
+  //-         button.btn.btn-primary(type='submit', ng-click='movieSearch(newThing)') Search!
+  a.close(ng-click="close()") CLOSE
+  .beers(ng-if="activeBeer") 
+    h2 {{activeBeer.name}} 
+    p {{activeBeer.description}}
+    img(ng-if="activeBeer.labels.icon", ng-src="{{activeBeer.labels.large}}")
+  .movie(ng-if="activeMovie")
+    h2 {{activeMovie.Title}}
+    p {{activeMovie.Plot}}
+    img(ng-if="activeMovie", ng-src="{{activeMovie.Poster}}")
+  .pairs
+    ul
+      li(ng-repeat="pair in pairs") {{pair.name}} / {{pair.movieObject.Title}}
+
+
+
