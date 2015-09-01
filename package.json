@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
+    "brewerydb-node":"~0.0.1",
     "grunt": "~0.4.5",
     "grunt-wiredep": "^2.0.0",
     "grunt-concurrent": "^2.0.1",
