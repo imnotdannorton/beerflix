@@ -31,10 +31,10 @@
     h2 {{activeBeer.name}}
     img(ng-if="activeBeer.labels.large", ng-src="{{activeBeer.labels.large}}" class="label") 
     p {{activeBeer.description}}
-    h3(ng-if="activeBeer.pairs") Also Paired With:
-    .thumbs(ng-repeat="pair in activeBeer.pairs") 
+    h3(ng-if="activeBeer.pairs.length > 1") Also Paired With:
+    .thumbs(ng-repeat="pair in activeBeer.pairs" ng-hide="pair.movieObject.imdbID == activeMovie.imdbID") 
       h3 {{pair.Title}}
-      img(ng-src="{{pair.Poster}}")
+      img(ng-src="{{pair.Poster}}" ng-if="pair.movieObject.Poster !== 'N/A'")
 
   .movie(ng-if="activeMovie")
     h2 {{activeMovie.Title}}

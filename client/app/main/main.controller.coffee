@@ -28,6 +28,7 @@ angular.module 'beerflixAngularApp'
     console.log $scope.pairs
   
   $scope.close = ->
+    $scope.clearPair()
     $scope.$root.$broadcast 'closeDoors'
     $('#doors>div.hidden, button.hidden').removeClass 'hidden'
     $('.enter').show()
@@ -35,6 +36,7 @@ angular.module 'beerflixAngularApp'
   $scope.clearPair = ()->
     $scope.activeBeer = null
     $scope.activeMovie = null
+
   $scope.makePair = (beer, movie)->
     $http.post '/api/beer', 
       name: beer.name
@@ -44,6 +46,7 @@ angular.module 'beerflixAngularApp'
       img: beer.labels?.large
       desc: beer.description
     $('#doors>div').addClass 'hidden'
+    $('.enter').hide(300);
     return
 
   $scope.addThing = ->
@@ -87,7 +90,10 @@ angular.module 'beerflixAngularApp'
   $scope.matchBeer = (beer)->
     console.log beer
     $scope.activeBeer = beer
-    findPairs = moviesService.findPairById(beer.id)
+    if beer.id
+      findPairs = moviesService.findPairById(beer.id)
+    if beer.beerId
+      findPairs = moviesService.findPairById(beer.beerId)
     findPairs.then (pairs)->
       if pairs.data.length > 0
         console.log "pairs", pairs
@@ -109,6 +115,7 @@ angular.module 'beerflixAngularApp'
     $('#doors>div, .enter').addClass 'hidden'
     $('.enter').hide(300);
     $('.pairs').removeClass 'hidden'
+    return
 
   $scope.matchMovie = (movie)->
     console.log movie
@@ -117,7 +124,8 @@ angular.module 'beerflixAngularApp'
       $scope.activeMovie = data.data
 
   $scope.activePair = (beer, movie)->
-    console.log beer
+    console.log beer, movie
+    $scope.matchBeer(beer);
     $scope.activeBeer = beer
     $scope.activeBeer.description = beer.desc
     $scope.activeBeer.labels = {}
@@ -153,7 +161,8 @@ angular.module 'beerflixAngularApp'
       $scope.activeBeer = $scope.beers[Math.floor(Math.random() * ($scope.beers?.length-1))]
   
   $scope.pair = (b, m)->
-    $('#doors>div').addClass 'hidden'
+    $('#doors>div, .enter').addClass 'hidden'
+    $('.enter').hide();
     return
 
   $scope.$on '$destroy', ->
