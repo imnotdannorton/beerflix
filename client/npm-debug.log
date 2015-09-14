@@ -1,0 +1,318 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.36
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/Users/dannorton/beerflix',
+5 verbose install   [ 'express',
+5 verbose install     'morgan',
+5 verbose install     'body-parser',
+5 verbose install     'method-override',
+5 verbose install     'cookie-parser',
+5 verbose install     'express-session',
+5 verbose install     'errorhandler',
+5 verbose install     'compression',
+5 verbose install     'composable-middleware',
+5 verbose install     'lodash',
+5 verbose install     'babel-core',
+5 verbose install     'jade',
+5 verbose install     'mongoose',
+5 verbose install     'bluebird',
+5 verbose install     'connect-mongo',
+5 verbose install     'socket.io',
+5 verbose install     'socket.io-client',
+5 verbose install     'socketio-jwt',
+5 verbose install     'serve-favicon',
+5 verbose install     'autoprefixer-core',
+5 verbose install     'brewerydb-node',
+5 verbose install     'grunt',
+5 verbose install     'grunt-wiredep',
+5 verbose install     'grunt-concurrent',
+5 verbose install     'grunt-contrib-clean',
+5 verbose install     'grunt-contrib-concat',
+5 verbose install     'grunt-contrib-copy',
+5 verbose install     'grunt-contrib-cssmin',
+5 verbose install     'grunt-contrib-imagemin',
+5 verbose install     'grunt-contrib-jshint',
+5 verbose install     'grunt-contrib-uglify',
+5 verbose install     'grunt-contrib-watch',
+5 verbose install     'grunt-contrib-coffee',
+5 verbose install     'grunt-contrib-jade',
+5 verbose install     'grunt-google-cdn',
+5 verbose install     'grunt-jscs',
+5 verbose install     'grunt-newer',
+5 verbose install     'grunt-ng-annotate',
+5 verbose install     'grunt-filerev',
+5 verbose install     'grunt-usemin',
+5 verbose install     'grunt-env',
+5 verbose install     'grunt-node-inspector',
+5 verbose install     'grunt-nodemon',
+5 verbose install     'grunt-angular-templates',
+5 verbose install     'grunt-dom-munger',
+5 verbose install     'grunt-protractor-runner',
+5 verbose install     'grunt-injector',
+5 verbose install     'grunt-karma',
+5 verbose install     'grunt-build-control',
+5 verbose install     'grunt-contrib-sass',
+5 verbose install     'jit-grunt',
+5 verbose install     'time-grunt',
+5 verbose install     'grunt-express-server',
+5 verbose install     'grunt-postcss',
+5 verbose install     'grunt-open',
+5 verbose install     'open',
+5 verbose install     'jshint-stylish',
+5 verbose install     'connect-livereload',
+5 verbose install     'mocha',
+5 verbose install     'grunt-mocha-test',
+5 verbose install     'grunt-mocha-istanbul',
+5 verbose install     'istanbul',
+5 verbose install     'chai-as-promised',
+5 verbose install     'chai-things',
+5 verbose install     'sinon-chai',
+5 verbose install     'jasmine-core',
+5 verbose install     'karma-jasmine',
+5 verbose install     'jasmine-spec-reporter',
+5 verbose install     'karma-ng-scenario',
+5 verbose install     'karma-firefox-launcher',
+5 verbose install     'karma-script-launcher',
+5 verbose install     'karma-html2js-preprocessor',
+5 verbose install     'karma-ng-jade2js-preprocessor',
+5 verbose install     'karma-chrome-launcher',
+5 verbose install     'requirejs',
+5 verbose install     'karma-requirejs',
+5 verbose install     'karma-coffee-preprocessor',
+5 verbose install     'karma-jade-preprocessor',
+5 verbose install     'karma-phantomjs-launcher',
+5 verbose install     'karma',
+5 verbose install     'karma-ng-html2js-preprocessor',
+5 verbose install     'karma-spec-reporter',
+5 verbose install     'proxyquire',
+5 verbose install     'supertest' ] ]
+6 info preinstall beerflix-angular@0.0.0
+7 verbose readDependencies using package.json deps
+8 verbose already installed skipping express@~4.9.0 /Users/dannorton/beerflix
+9 verbose already installed skipping morgan@~1.0.0 /Users/dannorton/beerflix
+10 verbose already installed skipping body-parser@~1.5.0 /Users/dannorton/beerflix
+11 verbose already installed skipping method-override@~1.0.0 /Users/dannorton/beerflix
+12 verbose already installed skipping cookie-parser@~1.0.1 /Users/dannorton/beerflix
+13 verbose already installed skipping express-session@~1.0.2 /Users/dannorton/beerflix
+14 verbose already installed skipping errorhandler@~1.0.0 /Users/dannorton/beerflix
+15 verbose already installed skipping compression@~1.0.1 /Users/dannorton/beerflix
+16 verbose already installed skipping composable-middleware@^0.3.0 /Users/dannorton/beerflix
+17 verbose already installed skipping lodash@~2.4.1 /Users/dannorton/beerflix
+18 verbose already installed skipping babel-core@^5.6.4 /Users/dannorton/beerflix
+19 verbose already installed skipping jade@~1.2.0 /Users/dannorton/beerflix
+20 verbose already installed skipping mongoose@^4.1.2 /Users/dannorton/beerflix
+21 verbose already installed skipping bluebird@^2.9.34 /Users/dannorton/beerflix
+22 verbose already installed skipping connect-mongo@^0.8.1 /Users/dannorton/beerflix
+23 verbose already installed skipping socket.io@^1.3.5 /Users/dannorton/beerflix
+24 verbose already installed skipping socket.io-client@^1.3.5 /Users/dannorton/beerflix
+25 verbose already installed skipping socketio-jwt@^4.2.0 /Users/dannorton/beerflix
+26 verbose already installed skipping serve-favicon@~2.0.1 /Users/dannorton/beerflix
+27 verbose already installed skipping autoprefixer-core@^5.2.1 /Users/dannorton/beerflix
+28 verbose already installed skipping brewerydb-node@~0.0.1 /Users/dannorton/beerflix
+29 verbose already installed skipping grunt@~0.4.5 /Users/dannorton/beerflix
+30 verbose already installed skipping grunt-wiredep@^2.0.0 /Users/dannorton/beerflix
+31 verbose already installed skipping grunt-concurrent@^2.0.1 /Users/dannorton/beerflix
+32 verbose already installed skipping grunt-contrib-clean@^0.6.0 /Users/dannorton/beerflix
+33 verbose already installed skipping grunt-contrib-concat@^0.5.1 /Users/dannorton/beerflix
+34 verbose already installed skipping grunt-contrib-copy@^0.8.0 /Users/dannorton/beerflix
+35 verbose already installed skipping grunt-contrib-cssmin@^0.13.0 /Users/dannorton/beerflix
+36 verbose already installed skipping grunt-contrib-imagemin@^0.9.4 /Users/dannorton/beerflix
+37 verbose already installed skipping grunt-contrib-jshint@~0.11.2 /Users/dannorton/beerflix
+38 verbose already installed skipping grunt-contrib-uglify@^0.9.1 /Users/dannorton/beerflix
+39 verbose already installed skipping grunt-contrib-watch@~0.6.1 /Users/dannorton/beerflix
+40 verbose already installed skipping grunt-contrib-coffee@^0.13.0 /Users/dannorton/beerflix
+41 verbose already installed skipping grunt-contrib-jade@^0.15.0 /Users/dannorton/beerflix
+42 verbose already installed skipping grunt-google-cdn@~0.4.0 /Users/dannorton/beerflix
+43 verbose already installed skipping grunt-jscs@^2.0.0 /Users/dannorton/beerflix
+44 verbose already installed skipping grunt-newer@^1.1.1 /Users/dannorton/beerflix
+45 verbose already installed skipping grunt-ng-annotate@^1.0.1 /Users/dannorton/beerflix
+46 verbose already installed skipping grunt-filerev@^2.3.1 /Users/dannorton/beerflix
+47 verbose already installed skipping grunt-usemin@^3.0.0 /Users/dannorton/beerflix
+48 verbose already installed skipping grunt-env@~0.4.1 /Users/dannorton/beerflix
+49 verbose already installed skipping grunt-node-inspector@^0.2.0 /Users/dannorton/beerflix
+50 verbose already installed skipping grunt-nodemon@^0.4.0 /Users/dannorton/beerflix
+51 verbose already installed skipping grunt-angular-templates@^0.5.4 /Users/dannorton/beerflix
+52 verbose already installed skipping grunt-dom-munger@^3.4.0 /Users/dannorton/beerflix
+53 verbose already installed skipping grunt-protractor-runner@^2.0.0 /Users/dannorton/beerflix
+54 verbose already installed skipping grunt-injector@^0.6.0 /Users/dannorton/beerflix
+55 verbose already installed skipping grunt-karma@~0.12.0 /Users/dannorton/beerflix
+56 verbose already installed skipping grunt-build-control@^0.5.0 /Users/dannorton/beerflix
+57 verbose already installed skipping grunt-contrib-sass@^0.9.0 /Users/dannorton/beerflix
+58 verbose already installed skipping jit-grunt@^0.9.1 /Users/dannorton/beerflix
+59 verbose already installed skipping time-grunt@^1.2.1 /Users/dannorton/beerflix
+60 verbose already installed skipping grunt-express-server@^0.5.1 /Users/dannorton/beerflix
+61 verbose already installed skipping grunt-postcss@^0.5.5 /Users/dannorton/beerflix
+62 verbose already installed skipping grunt-open@~0.2.3 /Users/dannorton/beerflix
+63 verbose already installed skipping open@~0.0.4 /Users/dannorton/beerflix
+64 verbose already installed skipping jshint-stylish@~2.0.1 /Users/dannorton/beerflix
+65 verbose already installed skipping connect-livereload@^0.5.3 /Users/dannorton/beerflix
+66 verbose already installed skipping mocha@^2.2.5 /Users/dannorton/beerflix
+67 verbose already installed skipping grunt-mocha-test@~0.12.7 /Users/dannorton/beerflix
+68 verbose already installed skipping grunt-mocha-istanbul@^3.0.1 /Users/dannorton/beerflix
+69 verbose already installed skipping istanbul@^0.3.17 /Users/dannorton/beerflix
+70 verbose already installed skipping chai-as-promised@^5.1.0 /Users/dannorton/beerflix
+71 verbose already installed skipping chai-things@^0.2.0 /Users/dannorton/beerflix
+72 verbose already installed skipping sinon-chai@^2.8.0 /Users/dannorton/beerflix
+73 verbose already installed skipping jasmine-core@^2.3.4 /Users/dannorton/beerflix
+74 verbose already installed skipping karma-jasmine@~0.3.0 /Users/dannorton/beerflix
+75 verbose already installed skipping jasmine-spec-reporter@^2.4.0 /Users/dannorton/beerflix
+76 verbose already installed skipping karma-ng-scenario@~0.1.0 /Users/dannorton/beerflix
+77 verbose already installed skipping karma-firefox-launcher@~0.1.6 /Users/dannorton/beerflix
+78 verbose already installed skipping karma-script-launcher@~0.1.0 /Users/dannorton/beerflix
+79 verbose already installed skipping karma-html2js-preprocessor@~0.1.0 /Users/dannorton/beerflix
+80 verbose already installed skipping karma-ng-jade2js-preprocessor@^0.2.0 /Users/dannorton/beerflix
+81 verbose already installed skipping karma-chrome-launcher@~0.2.0 /Users/dannorton/beerflix
+82 verbose already installed skipping requirejs@~2.1.11 /Users/dannorton/beerflix
+83 verbose already installed skipping karma-requirejs@~0.2.2 /Users/dannorton/beerflix
+84 verbose already installed skipping karma-coffee-preprocessor@~0.3.0 /Users/dannorton/beerflix
+85 verbose already installed skipping karma-jade-preprocessor@0.0.11 /Users/dannorton/beerflix
+86 verbose already installed skipping karma-phantomjs-launcher@~0.2.0 /Users/dannorton/beerflix
+87 verbose already installed skipping karma@~0.13.3 /Users/dannorton/beerflix
+88 verbose already installed skipping karma-ng-html2js-preprocessor@~0.1.2 /Users/dannorton/beerflix
+89 verbose already installed skipping karma-spec-reporter@~0.0.20 /Users/dannorton/beerflix
+90 verbose already installed skipping proxyquire@^1.0.1 /Users/dannorton/beerflix
+91 verbose already installed skipping supertest@~0.11.0 /Users/dannorton/beerflix
+92 silly resolved []
+93 info build /Users/dannorton/beerflix
+94 verbose linkStuff [ false, false, false, '/Users/dannorton' ]
+95 info linkStuff beerflix-angular@0.0.0
+96 verbose linkBins beerflix-angular@0.0.0
+97 verbose linkMans beerflix-angular@0.0.0
+98 verbose rebuildBundles beerflix-angular@0.0.0
+99 verbose rebuildBundles [ '.bin',
+99 verbose rebuildBundles   'autoprefixer-core',
+99 verbose rebuildBundles   'babel-core',
+99 verbose rebuildBundles   'bluebird',
+99 verbose rebuildBundles   'body-parser',
+99 verbose rebuildBundles   'brewerydb-node',
+99 verbose rebuildBundles   'chai',
+99 verbose rebuildBundles   'chai-as-promised',
+99 verbose rebuildBundles   'chai-things',
+99 verbose rebuildBundles   'composable-middleware',
+99 verbose rebuildBundles   'compression',
+99 verbose rebuildBundles   'connect-livereload',
+99 verbose rebuildBundles   'connect-mongo',
+99 verbose rebuildBundles   'cookie-parser',
+99 verbose rebuildBundles   'errorhandler',
+99 verbose rebuildBundles   'express',
+99 verbose rebuildBundles   'express-session',
+99 verbose rebuildBundles   'grunt',
+99 verbose rebuildBundles   'grunt-angular-templates',
+99 verbose rebuildBundles   'grunt-build-control',
+99 verbose rebuildBundles   'grunt-concurrent',
+99 verbose rebuildBundles   'grunt-contrib-clean',
+99 verbose rebuildBundles   'grunt-contrib-coffee',
+99 verbose rebuildBundles   'grunt-contrib-concat',
+99 verbose rebuildBundles   'grunt-contrib-copy',
+99 verbose rebuildBundles   'grunt-contrib-cssmin',
+99 verbose rebuildBundles   'grunt-contrib-imagemin',
+99 verbose rebuildBundles   'grunt-contrib-jade',
+99 verbose rebuildBundles   'grunt-contrib-jshint',
+99 verbose rebuildBundles   'grunt-contrib-sass',
+99 verbose rebuildBundles   'grunt-contrib-uglify',
+99 verbose rebuildBundles   'grunt-contrib-watch',
+99 verbose rebuildBundles   'grunt-dom-munger',
+99 verbose rebuildBundles   'grunt-env',
+99 verbose rebuildBundles   'grunt-express-server',
+99 verbose rebuildBundles   'grunt-filerev',
+99 verbose rebuildBundles   'grunt-google-cdn',
+99 verbose rebuildBundles   'grunt-injector',
+99 verbose rebuildBundles   'grunt-jscs',
+99 verbose rebuildBundles   'grunt-karma',
+99 verbose rebuildBundles   'grunt-mocha-istanbul',
+99 verbose rebuildBundles   'grunt-mocha-test',
+99 verbose rebuildBundles   'grunt-newer',
+99 verbose rebuildBundles   'grunt-ng-annotate',
+99 verbose rebuildBundles   'grunt-node-inspector',
+99 verbose rebuildBundles   'grunt-nodemon',
+99 verbose rebuildBundles   'grunt-open',
+99 verbose rebuildBundles   'grunt-postcss',
+99 verbose rebuildBundles   'grunt-protractor-runner',
+99 verbose rebuildBundles   'grunt-usemin',
+99 verbose rebuildBundles   'grunt-wiredep',
+99 verbose rebuildBundles   'istanbul',
+99 verbose rebuildBundles   'jade',
+99 verbose rebuildBundles   'jasmine-core',
+99 verbose rebuildBundles   'jasmine-spec-reporter',
+99 verbose rebuildBundles   'jit-grunt',
+99 verbose rebuildBundles   'jshint-stylish',
+99 verbose rebuildBundles   'karma',
+99 verbose rebuildBundles   'karma-chrome-launcher',
+99 verbose rebuildBundles   'karma-coffee-preprocessor',
+99 verbose rebuildBundles   'karma-firefox-launcher',
+99 verbose rebuildBundles   'karma-html2js-preprocessor',
+99 verbose rebuildBundles   'karma-jade-preprocessor',
+99 verbose rebuildBundles   'karma-jasmine',
+99 verbose rebuildBundles   'karma-ng-html2js-preprocessor',
+99 verbose rebuildBundles   'karma-ng-jade2js-preprocessor',
+99 verbose rebuildBundles   'karma-ng-scenario',
+99 verbose rebuildBundles   'karma-phantomjs-launcher',
+99 verbose rebuildBundles   'karma-requirejs',
+99 verbose rebuildBundles   'karma-script-launcher',
+99 verbose rebuildBundles   'karma-spec-reporter',
+99 verbose rebuildBundles   'lodash',
+99 verbose rebuildBundles   'method-override',
+99 verbose rebuildBundles   'mocha',
+99 verbose rebuildBundles   'mongoose',
+99 verbose rebuildBundles   'morgan',
+99 verbose rebuildBundles   'open',
+99 verbose rebuildBundles   'phantomjs',
+99 verbose rebuildBundles   'proxyquire',
+99 verbose rebuildBundles   'requirejs',
+99 verbose rebuildBundles   'serve-favicon',
+99 verbose rebuildBundles   'sinon',
+99 verbose rebuildBundles   'sinon-chai',
+99 verbose rebuildBundles   'socket.io',
+99 verbose rebuildBundles   'socket.io-client',
+99 verbose rebuildBundles   'socketio-jwt',
+99 verbose rebuildBundles   'supertest',
+99 verbose rebuildBundles   'time-grunt' ]
+100 verbose rebuild bundle /Users/dannorton/beerflix/node_modules/chai
+101 info build /Users/dannorton/beerflix/node_modules/chai
+102 info preinstall chai@3.2.0
+103 verbose linkStuff [ false, false, false, '/Users/dannorton/beerflix/node_modules' ]
+104 info linkStuff chai@3.2.0
+105 verbose linkBins chai@3.2.0
+106 verbose linkMans chai@3.2.0
+107 verbose rebuildBundles chai@3.2.0
+108 verbose rebuildBundles [ 'assertion-error', 'deep-eql', 'type-detect' ]
+109 info install chai@3.2.0
+110 info postinstall chai@3.2.0
+111 verbose rebuild bundle /Users/dannorton/beerflix/node_modules/phantomjs
+112 info build /Users/dannorton/beerflix/node_modules/phantomjs
+113 info preinstall phantomjs@1.9.18
+114 verbose linkStuff [ false, false, false, '/Users/dannorton/beerflix/node_modules' ]
+115 info linkStuff phantomjs@1.9.18
+116 verbose linkBins phantomjs@1.9.18
+117 verbose link bins [ { phantomjs: './bin/phantomjs' },
+117 verbose link bins   '/Users/dannorton/beerflix/node_modules/.bin',
+117 verbose link bins   false ]
+118 verbose linkMans phantomjs@1.9.18
+119 verbose rebuildBundles phantomjs@1.9.18
+120 verbose rebuildBundles [ '.bin',
+120 verbose rebuildBundles   'adm-zip',
+120 verbose rebuildBundles   'fs-extra',
+120 verbose rebuildBundles   'kew',
+120 verbose rebuildBundles   'npmconf',
+120 verbose rebuildBundles   'progress',
+120 verbose rebuildBundles   'request',
+120 verbose rebuildBundles   'request-progress',
+120 verbose rebuildBundles   'which' ]
+121 error Error: EACCES, unlink '/Users/dannorton/beerflix/node_modules/.bin/phantomjs'
+121 error  { [Error: EACCES, unlink '/Users/dannorton/beerflix/node_modules/.bin/phantomjs']
+121 error   errno: 3,
+121 error   code: 'EACCES',
+121 error   path: '/Users/dannorton/beerflix/node_modules/.bin/phantomjs' }
+122 error Please try running this command again as root/Administrator.
+123 error System Darwin 14.5.0
+124 error command "node" "/usr/local/bin/npm" "install"
+125 error cwd /Users/dannorton/beerflix/client
+126 error node -v v0.10.36
+127 error npm -v 1.4.28
+128 error path /Users/dannorton/beerflix/node_modules/.bin/phantomjs
+129 error code EACCES
+130 error errno 3
+131 error stack Error: EACCES, unlink '/Users/dannorton/beerflix/node_modules/.bin/phantomjs'
+132 verbose exit [ 3, true ]
