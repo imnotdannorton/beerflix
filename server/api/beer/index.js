@@ -17,6 +17,8 @@ router.get('/:q', function(req, res){
 
 router.post('/', controller.create);
 router.get('/', controller.index);
+router.get('/find/:q', controller.findBeerByName);
+router.get('/findbyid/:q', controller.findBeerById);
 
 function handleError(res, statusCode) {
   statusCode = statusCode || 500;

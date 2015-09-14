@@ -30,8 +30,11 @@ angular.module 'beerflixAngularApp'
   $scope.close = ->
     $scope.$root.$broadcast 'closeDoors'
     $('#doors>div.hidden, button.hidden').removeClass 'hidden'
+    $('.enter').show()
     return
-
+  $scope.clearPair = ()->
+    $scope.activeBeer = null
+    $scope.activeMovie = null
   $scope.makePair = (beer, movie)->
     $http.post '/api/beer', 
       name: beer.name
@@ -40,7 +43,7 @@ angular.module 'beerflixAngularApp'
       beerId: beer.id
       img: beer.labels?.large
       desc: beer.description
-    $('#doors>div, .pair>button').addClass 'hidden'
+    $('#doors>div').addClass 'hidden'
     return
 
   $scope.addThing = ->
@@ -56,14 +59,14 @@ angular.module 'beerflixAngularApp'
   $scope.$watch =>
     $scope.beerFind
   , (newVal, oldVal)=>
-    console.log newVal
+    # console.log newVal
     $scope.asyncFetchBeer(newVal)
   , true
 
   $scope.$watch =>
     $scope.movieFind
   , (newVal, oldVal)=>
-    console.log newVal
+    # console.log newVal
     $scope.asyncFetchMovie(newVal)
   , true
 
@@ -84,11 +87,28 @@ angular.module 'beerflixAngularApp'
   $scope.matchBeer = (beer)->
     console.log beer
     $scope.activeBeer = beer
+    findPairs = moviesService.findPairById(beer.id)
+    findPairs.then (pairs)->
+      if pairs.data.length > 0
+        console.log "pairs", pairs
+        $scope.activeBeer.pairs = []
+        angular.forEach pairs.data, (val)->
+          console.log "looking up", val
+          lookup = moviesService.findById(val.movies[0])
+          lookup.then (data)->
+            console.log "pushing", data
+            $scope.activeBeer.pairs.push(data.data)
+        console.log "scope pairs", $scope.activeBeer.pairs
+        # $scope.activeBeer.pairs = pairs.data
     # movieLookup  = moviesService.search(beer.name)
     # movieLookup.then (movies)->
     #   $('#doors>div').addClass 'hidden'
     #   $scope.recMovies = movies.data["Search"]
     #   console.log $scope.recMovies
+  $scope.enter = ->
+    $('#doors>div, .enter').addClass 'hidden'
+    $('.enter').hide(300);
+    $('.pairs').removeClass 'hidden'
 
   $scope.matchMovie = (movie)->
     console.log movie
@@ -96,6 +116,15 @@ angular.module 'beerflixAngularApp'
     fetchFull.then (data)->
       $scope.activeMovie = data.data
 
+  $scope.activePair = (beer, movie)->
+    console.log beer
+    $scope.activeBeer = beer
+    $scope.activeBeer.description = beer.desc
+    $scope.activeBeer.labels = {}
+    $scope.activeBeer.labels.large = beer.img
+    $scope.activeMovie = movie
+    $('body').animate({'scrollTop':'0px'}, 300);
+    return
 
   $scope.movieSearch = (q)->
     flick = moviesService.search(q)
@@ -124,7 +153,7 @@ angular.module 'beerflixAngularApp'
       $scope.activeBeer = $scope.beers[Math.floor(Math.random() * ($scope.beers?.length-1))]
   
   $scope.pair = (b, m)->
-    $('#doors>div, #doors>div.pair>button').addClass 'hidden'
+    $('#doors>div').addClass 'hidden'
     return
 
   $scope.$on '$destroy', ->

@@ -60,6 +60,18 @@ exports.create = function(req, res){
 		.then(responseWithResult(res, 201))
 		.catch(handleError(res));
 }
+exports.findBeerByName = function(req, res){
+	//Searches beer by name
+	Beer.find({'name':new RegExp(req.params.q, 'i')})
+	.then(responseWithResult(res))
+		.catch(handleError(res));
+}
+exports.findBeerById = function(req, res){
+	//Searches beer by name
+	Beer.find({'beerId':new RegExp(req.params.q, 'i')})
+	.then(responseWithResult(res))
+		.catch(handleError(res));
+}
 exports.destroy = function(req, res){
 	Beer.findByIdAsync(req.params.id)
 		.then(handleEntityNotFound(res))

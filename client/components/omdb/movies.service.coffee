@@ -12,6 +12,8 @@ angular.module 'beerflixAngularApp'
 		$http.get(querystring)
 	searchBeer: (query)->
 		$http.get('/api/beer/'+query)
+	findPairById: (id)->
+		$http.get('api/beer/findbyid/'+id)
 	find: (query)->
 		querystring = endpoint + '?t=' + query + '&y=&plot=full&r=json&max=10'
 		$http.get(querystring).success (data)->
