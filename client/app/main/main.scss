@@ -206,7 +206,7 @@ h1,h2{
 }
 .pairs{
   background-color: gold;
-  &:hidden{
+  &.hidden{
     display:none;
   }
   h1{
@@ -223,9 +223,15 @@ h1,h2{
         height: 250px;
         padding: .5%;
         overflow-y:scroll;
+        &:hover{
+          background-color: rgba(255, 255, 255, .5);
+          cursor: pointer;
+        }
         img{
           max-width: 100%;
           max-height: 150px;
+          margin: 1% auto;
+          display: block;
         }
       }
     }

@@ -20,19 +20,19 @@
       button(ng-click="clearPair()" value="Create Match") X
     .enter(ng-click="enter()")
       h1 Show Me Some Pairings! &raquo;  
+  a.close(ng-click="close()") CLOSE
   p.input-group
-    
     form(ng-submit='movieSearch(newThing)')
         input.form-control(type='text', placeholder='Add a new thing here.', ng-model='newThing')
         span.input-group-btn
           button.btn.btn-primary(type='submit', ng-click='movieSearch(newThing)') Search!
-  a.close(ng-click="close()") CLOSE
+  
   .beers(ng-if="activeBeer") 
     h2 {{activeBeer.name}}
     img(ng-if="activeBeer.labels.large", ng-src="{{activeBeer.labels.large}}" class="label") 
     p {{activeBeer.description}}
     h3(ng-if="activeBeer.pairs.length > 1") Also Paired With:
-    .thumbs(ng-repeat="pair in activeBeer.pairs" ng-hide="pair.movieObject.imdbID == activeMovie.imdbID") 
+    .thumbs(ng-repeat="pair in activeBeer.pairs" ng-if="activeBeer.pairs.length > 1" ng-hide="pair.movieObject.imdbID == activeMovie.imdbID") 
       h3 {{pair.Title}}
       img(ng-src="{{pair.Poster}}" ng-if="pair.movieObject.Poster !== 'N/A'")
 
@@ -44,8 +44,9 @@
     h1 Recent Pairings
     ul
       li(ng-repeat="pair in pairs" ng-if="pair.movieObject.Poster != 'N/A'")
-        img(ng-if="pair.movieObject.Poster", ng-src="{{pair.movieObject.Poster}}" class="poster" ng-click="activePair(pair, pair.movieObject)")
-        span {{pair.name}} / {{pair.movieObject.Title}} 
+        a(ng-href="/match/{{pair._id}}")
+          img(ng-if="pair.movieObject.Poster", ng-src="{{pair.movieObject.Poster}}" class="poster")
+          span {{pair.name}} / {{pair.movieObject.Title}} 
 
 
 

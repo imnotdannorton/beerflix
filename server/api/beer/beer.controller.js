@@ -72,8 +72,21 @@ exports.findBeerById = function(req, res){
 	.then(responseWithResult(res))
 		.catch(handleError(res));
 }
+exports.findPairById = function(req, res){
+  //Searches beer by name
+  Beer.find({'_id':req.params.q})
+  .then(responseWithResult(res))
+    .catch(handleError(res));
+}
+exports.update = function(req, res){
+  Beer.findByIdAsync(req.body.id)
+    .then(handleEntityNotFound(res))
+    .then(saveUpdates(req.body))
+    .then(responseWithResult(res))
+    .catch(handleError(res));
+}
 exports.destroy = function(req, res){
-	Beer.findByIdAsync(req.params.id)
+	Beer.findByIdAsync(req.body.id)
 		.then(handleEntityNotFound(res))
 		.then(removeEntity(res))
 		.catch(handleError(res));
