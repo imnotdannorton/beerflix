@@ -1,0 +1,19 @@
+#wrapper
+	.pair
+		.movie
+			h2(ng-bind-html="activePair.name")
+			img(ng-src="{{activePair.img}}")
+			p(ng-bind-html="activePair.desc")
+		.movie(ng-if="activeMovie.Title")
+			h2(ng-bind-html="activeMovie.Title")
+			img(ng-if="activeMovie.Poster" ng-src="{{activeMovie.Poster}}" class="poster")
+			p {{activeMovie.Plot}}
+	.rating
+		h3 Rate this Pair
+		span(ng-repeat="star in [1,2,3,4,5]" rating="{{$index}}" ng-click="rateMatch($index)" class="star")
+	.related.pairs
+		h2 Other Movies Paired with {{activePair.name}}
+		ul
+			li(ng-repeat="movie in moviesList")
+				img(ng-src="{{movie.Poster}}")
+				h3 {{movie.Title}}

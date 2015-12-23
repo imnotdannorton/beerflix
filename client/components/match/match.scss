@@ -1,0 +1,46 @@
+.related{
+	background-color: gold;
+	padding: 1%;
+	ul{
+		list-style-type: none;
+	}
+}
+/*rating*/
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-size: 24px;
+  padding: 1%;
+  h3{
+  	margin: .6em 0;
+  }
+}
+.rating span.star{
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block; 
+  cursor: pointer;
+}
+.rating span.star:before {
+  content: "\f006";
+  padding-right: 5px;
+  color: #999;
+  position: relative;
+  top:2px;
+}
+.rating span.star:hover:before,.rating span.star:hover~span.star:before{
+  content:"\f005";
+  color:#fbe05f; 
+  /*cursor: pointer;*/
+}
+.rating span.star.rated:before{
+  content:"\f005";
+  color:#fbe05f;
+  cursor:none;
+}
+.rating span.star.nohover:hover:before{
+  content:"\f006";
+  color:#999;
+  cursor:none;
+}
