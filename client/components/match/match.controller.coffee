@@ -13,7 +13,11 @@ angular.module 'beerflixAngularApp'
 	    #   activeMovie = data.data
 	    #   return activeMovie
 	$scope.rateMatch = (index)->
-		matchesService.update({id:$route.current.params.id, rating:index})
+		rateCount = ($scope.activePair.ratingCount || 0) + 1
+		rating = (5-index + ($scope.activePair.rating || 0))/rateCount 
+		rate = matchesService.update({id:$route.current.params.id, rating:rating, ratingCount:rateCount})
+		rate.then (data)->
+			console.log data
 	
 	$scope.$watch =>
 		$route.current.params.id
@@ -22,7 +26,7 @@ angular.module 'beerflixAngularApp'
 		match = matchesService.fetchPair(newVal) 
 		match.then (data)->
 			$scope.activePair = data.data[0]
-			console.log $scope.activePair.movies[0]
+			console.log $scope.activePair
 			movieFetch = matchesService.findById($scope.activePair.movies[0])
 			movieFetch.then (movie)->
 				$scope.activeMovie = movie.data

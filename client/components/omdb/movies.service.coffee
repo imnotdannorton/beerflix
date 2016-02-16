@@ -23,7 +23,7 @@ angular.module 'beerflixAngularApp'
 	findById: (id)->
 		querystring = endpoint + '?i=' + id + '&y=&plot=full&r=json&max=10'
 		$http.get(querystring)
-	update: (id, obj)->
+	update: (obj)->
 		$http.post('/api/beer/update', obj)
         
 

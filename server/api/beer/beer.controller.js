@@ -79,6 +79,7 @@ exports.findPairById = function(req, res){
     .catch(handleError(res));
 }
 exports.update = function(req, res){
+  console.log(req.body)
   Beer.findByIdAsync(req.body.id)
     .then(handleEntityNotFound(res))
     .then(saveUpdates(req.body))

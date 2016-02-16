@@ -9,7 +9,9 @@ var BeerSchema = new Schema({
   active: Boolean,
   beerId: String,
   img: String,
-  desc: String
+  desc: String,
+  rating: Number,
+  ratingCount: Number
 });
 
 module.exports = mongoose.model('Beer', BeerSchema);
